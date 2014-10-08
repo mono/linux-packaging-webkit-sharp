@@ -37,11 +37,14 @@ Group:          Development/Languages/Mono
 Summary:        WebKit bindings for Mono
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Version:        %{_version}
-Release:        0
+Release:        1
 BuildArch:      noarch
 Source:         %{name}_%{version}.orig.tar.gz
 Patch0:         %{name}-pkgconfigdir.patch
 Patch1:         %{name}-0.3.diff
+%if 0%{?fedora} || 0%{?rhel} || 0%{?centos}
+Requires:       webkitgtk
+%else
 %if 0%{?suse_version} >= 1140
 Requires:       libwebkitgtk-1_0-0
 %else
@@ -49,6 +52,7 @@ Requires:       libwebkitgtk-1_0-0
 Requires:       libwebkit-1_0-2
 %else
 Requires:       libwebkit-1_0-1
+%endif
 %endif
 %endif
 
