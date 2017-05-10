@@ -36,10 +36,10 @@ License:        MIT
 Group:          Development/Languages/Mono
 Summary:        WebKit bindings for Mono
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Version:        %{_version}
-Release:        1.xamarin.0
+Version:	0.3
+Release:	0.xamarin.1
 BuildArch:      noarch
-Source:         %{name}_%{version}.orig.tar.gz
+Source:         %{name}-%{version}.tar.bz2
 Patch0:         %{name}-pkgconfigdir.patch
 Patch1:         %{name}-0.3.diff
 %if 0%{?fedora} || 0%{?rhel} || 0%{?centos}
