@@ -37,7 +37,7 @@ Group:          Development/Languages/Mono
 Summary:        WebKit bindings for Mono
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Version:        %{_version}
-Release:        1
+Release:        1.xamarin.0
 BuildArch:      noarch
 Source:         %{name}_%{version}.orig.tar.gz
 Patch0:         %{name}-pkgconfigdir.patch
